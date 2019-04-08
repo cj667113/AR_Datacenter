@@ -18,6 +18,7 @@ To generate markers, there is an online tool https://jeromeetienne.github.io/AR.
 
 # Generate 3-D objects
 I found that 3-D objects could be used in the A-Frames to which 2-D images can be converted to 3-D .stl files, and then from there convert them to .obj file to be used into the A-Frames.
+
 To convert from 2-D to 3-D STL files I used https://www.selva3d.com/
 
 To convert from 3-D STL files to .obj files I used https://www.meshconvert.com/
