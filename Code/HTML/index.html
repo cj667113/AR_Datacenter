@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+function get_data(){
+	$("#change").load("data/temperature.html").html();
+	x = setTimeout(function(){get_data()},25);
+}
+get_data();
+});
+</script>
+<script>
+$(document).ready(function(){
+function get_data(){
+        $("#change_LoPRTS").load("data/temperature_LoPRTS.html").html();
+        x = setTimeout(function(){get_data()},25);
+}
+get_data();
+});
+</script>
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs='sourceType: webcam;'>
+<a-asset-item id="cloud" src="objects/cloud.obj"></a-asset-item>
+<a-marker type='pattern' url='markers/pattern-marker-pit-229.patt'>
+	<a-entity obj-model="obj: #cloud;" scale=".05 .05 .05" rotation="-90 0 0" material="color:lightblue;opacity:.9">
+		<a-text id="change" position="0 -7 -10" scale="12 12 12"></a-text>
+	</a-entity>
+</a-marker>
+<a-marker type='pattern' url='markers/pattern-marker-LoPRTS.patt'>
+        <a-entity obj-model="obj: #cloud;" scale=".05 .05 .05" rotation="-90 0 0" material="color:lightblue;opacity:.9">
+                <a-text id="change_LoPRTS" position="-3.5 -6 -11" scale="11 11 11"></a-text>
+        </a-entity>
+</a-marker>
+<a-entity camera></a-entity>
+</a-scene>
+
+</body>
+</html>
