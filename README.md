@@ -7,3 +7,8 @@ This is built off of aframe.io, utilizing javascript plugin and A-frames to crea
 <img src="https://github.com/cj667113/AR_Datacenter/blob/master/Photos/AR_Setup.jpg" height="60%" width="50%">
 
 <img src="https://github.com/cj667113/AR_Datacenter/blob/master/Photos/marker-LoPRTS.png" height="35%" width="50%"><img src="https://github.com/cj667113/AR_Datacenter/blob/master/Photos/AR_LoPRTS.png" height="35%" width="50%">
+
+# Setup steps
+The first step is to setup a PRTG server to collect data from devices on the network. For every device that is generating data to PRTG there is a sensor ID that corrosponds. Utilizing this ID, we can plug it into the Python script along with the channel name to pull out the data in real-time and generate A-text tags that can be used.
+
+The next step is to create a server with SSL/TLS encryption with a valid certificate. This is needed to be able to initialize the camera on that webpage through javascript. There are many tutorials to do this, but I heavily recommend using the one from Digital Ocean.
