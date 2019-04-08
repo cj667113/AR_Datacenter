@@ -4,8 +4,8 @@ import re
 import time
 def prtg_collect():
     global temperature
-    prtg_setup=['prtgadmin','985831223','20062'] #Username,#Passhash,#SensorID
-    url = "https://monitor.its.ohio.edu/api/table.json?noraw=1&content=channels&sortby=name&columns=name=textraw,minimum,maximum,condition,lastvalue&id=%s&login=%s&passhash=%s" %(prtg_setup[2],prtg_setup[0],prtg_setup[1])
+    prtg_setup=['username','passhash','sensorid'] #Username,#Passhash,#SensorID
+    url = "https://url/api/table.json?noraw=1&content=channels&sortby=name&columns=name=textraw,minimum,maximum,condition,lastvalue&id=%s&login=%s&passhash=%s" %(prtg_setup[2],prtg_setup[0],prtg_setup[1])
     data_raw = requests.get(url=url)
     data=(json.loads(data_raw.text))
     data=str(data)
