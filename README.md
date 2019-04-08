@@ -12,3 +12,9 @@ This is built off of aframe.io, utilizing javascript plugin and A-frames to crea
 The first step is to setup a PRTG server to collect data from devices on the network. For every device that is generating data to PRTG there is a sensor ID that corrosponds. Utilizing this ID, we can plug it into the Python script along with the channel name to pull out the data in real-time and generate A-text tags that can be used.
 
 The next step is to create a server with SSL/TLS encryption with a valid certificate. This is needed to be able to initialize the camera on that webpage through javascript. There are many tutorials to do this, but I heavily recommend using the one from Digital Ocean.
+
+# Generate Markers
+To generate markers, there is an online tool https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html that can easily generate these. You supply an input file and a marker file and pattern file will be generated. Upon detecting the image using the pattern file on the camera, the object will be displayed. The pattern file is referenced in the index.html file and the marker image can be printed.
+
+# Generate 3-D objects
+I found that 3-D objects could be used in the A-Frames. 
