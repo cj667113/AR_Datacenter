@@ -16,6 +16,8 @@ The next step is to create a server with SSL/TLS encryption with a valid certifi
 # Generate Markers
 To generate markers, there is an online tool https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html that can easily generate these. You supply an input file and a marker file and pattern file will be generated. Upon detecting the image using the pattern file on the camera, the object will be displayed. The pattern file is referenced in the index.html file and the marker image can be printed.
 
+In my project, I created a subdirectory in the /var/www/html directory with the title of markers where the .patt file was saved. Inside the index.html, the pattern file was reference to marker/pattern-marker-pit-229.patt.
+
 # Generate 3-D objects
 I found that 3-D objects could be used in the A-Frames to which 2-D images can be converted to 3-D .stl files, and then from there convert them to .obj file to be used into the A-Frames.
 
